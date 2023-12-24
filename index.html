@@ -11,6 +11,7 @@
             display: flex;
           align-items: center;
           justify-content: center;
+	flex-direction: column;
         }
 
         .button-container {
@@ -20,11 +21,7 @@
           color: white;
           margin-right: 300px;
         }
-      
-      p{
-        margin-bottom: 150px;
-      }
-
+	    
         button {
           padding: 10px 20px;
           background-color: #DA70D6;
@@ -37,15 +34,27 @@
           cursor: pointer;
           position: absolute;
           top: 50%;
-          transform: translateY(-50%);
-			}
+	}
 
-			#newText {
-        font-family: 'Bradley Hand', cursive;
-        font-size: 30px;
-        font-weight: bold;
-        color: white;
-        z-index: 1;
+	#newText {
+          font-family: 'Bradley Hand', cursive;
+          font-size: 30px;
+          font-weight: bold;
+          color: white;
+          z-index: 1;
+        }
+
+	/* Media query for smaller screens (e.g., mobile) */
+        @media screen and (max-width: 600px) {
+            .button-container {
+                font-size: 20px;
+            }
+            button {
+                font-size: 16px;
+            }
+            #newText {
+                font-size: 24px;
+            }
         }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
